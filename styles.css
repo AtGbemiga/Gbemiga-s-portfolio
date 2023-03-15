@@ -211,6 +211,9 @@ body{
 	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .index-contact-section{
@@ -542,11 +545,11 @@ div.mobile-menu a:nth-of-type(2){
 /*added*/
   
 	.green {
-		background-color: #6495ED;
+		background-color: #424ef3;
 	  }
 	  
 	.red {
-		background-color: #B0E0E6;
+		background-color: #353a75; /*#3c428f*/
 	}
 	
 	.green2{
@@ -560,6 +563,24 @@ div.mobile-menu a:nth-of-type(2){
 /*Index page about me section*/
 .about-me{
 	margin-top: 1rem;
+}
+.skills-area-hp{
+	text-align: center;
+}
+
+.skills-area-hp h3{
+	font-size: 1.5rem;
+}
+.skills-area-hp .icon-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.skills-area-hp a{
+	color: var(--primary);
+	font-size: 36px;
 }
 /*footer*/
 footer{
