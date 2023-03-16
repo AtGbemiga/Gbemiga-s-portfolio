@@ -43,16 +43,5 @@
 			<a href="/index.html">Home</a>
 			<a href="/specific%20features.html">Specific Features</a>
 		</div>
-		<!--To make the dark mode work on multiple pages even if it wasn't set on it*/-->
-		<script>
-			checkbox.addEventListener( 'click', function() {
-			localStorage.setItem('bodyCssProps', this.darkModeToggle.checked);
-			if(this.darkModeToggle.checked) {
-				body.classList.add('bodyCssProps')
-			} else {
-				body.classList.remove('bodyCssProps')     
-			}
-		});
-		</script>
 	</body>
 </html>
