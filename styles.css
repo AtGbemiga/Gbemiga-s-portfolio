@@ -65,25 +65,63 @@ body{
 	color              : var(--primary);
 	font-family        : "Work Sans", sans-serif;
 	background         : var(--background);
-	/*box-sizing       : border-box;*/
 	transition         : color 0.5s;
 	transition         : background 0.5s;
    
 	--dark-background  : #1a1d21;
-	--dark-primary     : white; /*#FFFFE3*/
+	--dark-primary     : white;
 	--dark-link        : #A9FE75;
-   
-	--light-background : white; /*#ffffe3*/
+	--dark-projectboxes       : #BB86FC; /*FIRST-LINE. FULL PROJECTS. DARK MODE*/
+	--dark-projectboxestwo       : #794bb1; /*SECOND-LINE. FULL PROJECTS. DARK MODE*/ /*#6d44a0*/
+	--dark-featuresboxes       : rgb(245, 245, 245); /*FIRST-LINE. FEATURES PROJECTS. DARK MODE*/ /*#C8F7F2*/
+	--dark-featuresboxestwo       : #cfcdcd; /*SECOND-LINE. FEATURES PROJECTS. DARK MODE*/ /*#6d44a0*/
+	--dark-mobilemenu       : rgb(48, 19, 19); /*MOBILE MENU. DARK MODE*//*rgb(48, 27, 27)*/
+
+	--light-background : white;
 	--light-primary    : #1a1d21;
 	--light-link       : #1348da;
+	--light-projectboxes       : #424ef3; /*FIRST-LINE. FULL PROJECTS. LIGHT MODE*/
+	--light-projectboxestwo       : #353a75; /*SECOND-LINE. FULL PROJECTS. LIGHT MODE*/
+	--light-featuresboxes       : #49493f; /*FIRST-LINE. FEATURES PROJECTS. LIGHT MODE*/
+	--light-featuresboxestwo       : #19191d; /*SECOND-LINE. FEATURES PROJECTS. LIGHT MODE*/
+	--light-mobilemenu       : bisque; /*MOBILE MENU. LIGHT MODE*/
+
+	
    
 	--background       : var(--light-background);
 	--primary          : var(--light-primary);
 	--link             : var(--light-link);
+	--projectboxes     : var(--light-projectboxes); /*TOP. FULL PROJECTS*/
+	--projectboxestwo     : var(--light-projectboxestwo); /*TOP. FULL PROJECTS*/
+	--mobilemenu     : var(--light-mobilemenu);
+
+
 	}
   a {
 	color : var(--link);
 	}
+	/*added*/
+  
+	.green {
+		background-color: var(--projectboxes); /*#424ef3*/
+		color: var(--background); 
+	  }
+	
+	.red {
+		background-color: var(--projectboxestwo); /*#353a75*/
+		color: var(--background); 
+	}
+	
+	.green2{
+		background-color: var(--featuresboxes);
+		color: var(--background); 
+	}
+	
+	.red2 {
+		background-color: var(--featuresboxestwo);
+		color: var(--background); 
+	}
+
   /* separator bars */
   nav,
   section {
@@ -189,7 +227,7 @@ body{
 	border: 1px solid transparent;
 	padding: 80px 60px;
 	margin: 20px;
-	color: aliceblue;
+	/*color: aliceblue;*/
 	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
@@ -207,10 +245,12 @@ body{
 	border: 1px solid transparent;
 	padding: 60px;
 	margin: 20px;
-	color: black;
 	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .index-contact-section{
@@ -404,14 +444,14 @@ body{
 	color: var(--background); /*#ffffff*/
   }
 
-/*Full Project page**************************************************************************************/
+/*Full Project page******************************************************************SADDDDAAAASDDDDFFFSSSDGGGV********************/
 div.mobile-menu {
 	position: fixed;
 	width: 100%;
 	height: 70px;
 	bottom: 0px;
-	border: 3px solid bisque;
-	background-color: bisque;
+	border: 3px solid var(--mobilemenu);
+	background-color: var(--mobilemenu);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -419,7 +459,7 @@ div.mobile-menu {
 	margin-top: 30px;
 } 
 div.mobile-menu a{
-	color: black;
+	/*color: black;*/
 	text-decoration: none;
 	text-align: center;
 	border-radius: 5px;
@@ -427,9 +467,9 @@ div.mobile-menu a{
 }
 
 div.mobile-menu a:nth-of-type(1){
-	border: 1px solid black;
+	border: 1px solid var(--primary);
 	padding: 20px 55px;
-	
+	color: var(--primary);
 }
 div.mobile-menu a:nth-of-type(2){
 	border: 1px solid black;
@@ -509,8 +549,8 @@ div.mobile-menu a:nth-of-type(2){
 		width: 100%;
 		height: 70px;
 		bottom: 0px;
-		border: 3px solid bisque;
-		background-color: bisque;
+		border: 3px solid var(--mobilemenu);
+		background-color: var(--mobilemenu);
 		display: flex;
 		align-items: center;
 		column-gap: 40px;
@@ -524,9 +564,9 @@ div.mobile-menu a:nth-of-type(2){
 	}
 
 	div.mobile-menu a:nth-of-type(1){
-		border: 1px solid black;
+		border: 1px solid var(--primary) !important;
 		padding: 15px 55px;
-		
+		color: var(--primary) !important;
 	}
 	div.mobile-menu a:nth-of-type(2){
 		border: 1px solid black;
@@ -539,27 +579,29 @@ div.mobile-menu a:nth-of-type(2){
 	}
 }
 
-/*added*/
-  
-	.green {
-		background-color: #6495ED;
-	  }
-	  
-	.red {
-		background-color: #B0E0E6;
-	}
-	
-	.green2{
-		background-color: #00008B;
-	}
-	
-	.red2 {
-		background-color: #87CEEB;
-	}
 
 /*Index page about me section*/
 .about-me{
 	margin-top: 1rem;
+}
+.skills-area-hp{
+	margin-top: 3rem;
+	text-align: center;
+}
+
+.skills-area-hp h3{
+	font-size: 1.5rem;
+}
+.skills-area-hp .icon-div{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.skills-area-hp a{
+	color: var(--primary);
+	font-size: 36px;
 }
 /*footer*/
 footer{

@@ -25,6 +25,12 @@ class CssPropControl {
    	bodyCssProps.set('--primary', bodyCssProps.get(`--${mode}-primary`))
     bodyCssProps.set('--link', bodyCssProps.get(`--${mode}-link`))
 
+    bodyCssProps.set('--projectboxes', bodyCssProps.get(`--${mode}-projectboxes`))
+    bodyCssProps.set('--projectboxestwo', bodyCssProps.get(`--${mode}-projectboxestwo`))
+    bodyCssProps.set('--featuresboxes', bodyCssProps.get(`--${mode}-featuresboxes`))
+    bodyCssProps.set('--featuresboxestwo', bodyCssProps.get(`--${mode}-featuresboxestwo`))
+    bodyCssProps.set('--mobilemenu', bodyCssProps.get(`--${mode}-mobilemenu`))
+
 	/*To make the dark mode work on multiple pages even if it wasn't set on it*/
 	if(localStorage.getItem('bodyCssProps')) {
 		body.classList.add('bodyCssProps');
@@ -61,7 +67,7 @@ window.addEventListener('load', (event) => {
   
 }); 
 
-
+// add class for projects/features bg color
 const full_project = document.querySelectorAll('.index-full-projects-section a');
 for (let i = 0; i < full_project.length; i++) {
 	full_project[i].classList.add('specificss')
