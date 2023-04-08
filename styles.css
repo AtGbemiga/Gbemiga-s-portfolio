@@ -224,10 +224,6 @@ body{
 }
 
 .index-full-projects-section-content{
-	border: 1px solid transparent;
-	padding: 80px 60px;
-	margin: 20px;
-	/*color: aliceblue;*/
 	font-weight: bold;
 	text-decoration: none;
 	text-align: center;
@@ -613,4 +609,8 @@ footer{
 	padding: 0 0.5rem;
 	border-radius: 1rem;
 	color: white !important;
+}
+
+a[href="https://github.com"] {
+	margin-bottom: 26px;
 }
