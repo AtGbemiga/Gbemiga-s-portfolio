@@ -611,6 +611,17 @@ footer{
 	color: white !important;
 }
 
+/*other*/
 a[href="https://github.com"] {
 	margin-bottom: 26px;
+}
+
+@media (max-width: 550px) {
+	.project-container{
+		box-sizing: border-box;
+		text-align: center;
+	}
+	.index-full-projects-section{
+		display: inline-block;
+	}
 }

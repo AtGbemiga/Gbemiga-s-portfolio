@@ -68,7 +68,7 @@ window.addEventListener('load', (event) => {
 }); 
 
 // add class for projects/features bg color
-const full_project = document.querySelectorAll('.index-full-projects-section a');
+const full_project = document.querySelectorAll('.index-full-projects-section-content');
 for (let i = 0; i < full_project.length; i++) {
 	full_project[i].classList.add('specificss')
 	if (i % 8 < 4) {
@@ -78,16 +78,23 @@ for (let i = 0; i < full_project.length; i++) {
 	}
 }
 
-const specifics = document.querySelectorAll('.index-specific-features-div a');
-/*specifics.classList.add('specificss');*/
-for (let i = 0; i < specifics.length; i++) {
-	specifics[i].classList.add('specificss')
-	if (i % 10 < 5) {
-		specifics[i].classList.add('green2');
-	  } else {
-		specifics[i].classList.add('red2');
-	}
+// color change media query
+let mql = window.matchMedia("(max-width: 576px)");
+
+if (mql.matches) {
+  const full_project = document.querySelectorAll('.query');
+  for (let i = 0; i < full_project.length; i++) {
+    full_project[i].classList.add('specificss');
+    
+    if ((i + 1) % 2 === 0) {
+      full_project[i].classList.add('green');
+    } else {
+      full_project[i].classList.add('red');
+    }
+  }
 }
+
+
 
 
 const msg = "Welcome";
