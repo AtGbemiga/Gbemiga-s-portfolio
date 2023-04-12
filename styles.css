@@ -608,7 +608,7 @@ footer{
 }
 
 /*other*/
-a[href="https://github.com"] {
+.readme-mb {
 	margin-bottom: 26px;
 }
 .project-container{
